@@ -28,7 +28,7 @@ export class DurableHttpRequest {
         },
         /** The source of OAuth token to add to the request. */
         public readonly tokenSource?: TokenSource,
-        /**  Whether the DurableHtBtpRequest should handle the asynchronous pattern. **/
+        /**  Whether the DurableHttpRequest should handle the asynchronous pattern. **/
         public readonly asynchronousPatternEnabled?: boolean
     ) {}
 }
