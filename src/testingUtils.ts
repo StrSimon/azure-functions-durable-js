@@ -46,7 +46,7 @@ export class DummyOrchestrationContext implements IOrchestrationFunctionContext 
         currentUtcDateTime: Date = new Date(),
         longRunningTimerIntervalDuration = "3.00:00:00",
         maximumShortTimerDuration = "6.00:00:00",
-        defaultHttpAsyncRequestSleepDurationInMillseconds = 30000,
+        defaultHttpAsyncRequestSleepTimeMillseconds = 30000,
         schemaVersion: ReplaySchema,
         isReplaying = false,
         parentInstanceId = ""
@@ -64,7 +64,7 @@ export class DummyOrchestrationContext implements IOrchestrationFunctionContext 
             parentInstanceId,
             longRunningTimerIntervalDuration,
             maximumShortTimerDuration,
-            defaultHttpAsyncRequestSleepDurationInMillseconds,
+            defaultHttpAsyncRequestSleepTimeMillseconds,
             schemaVersion,
             input,
             new TaskOrchestrationExecutor()

@@ -48,7 +48,7 @@ export class DurableOrchestrationContext {
         parentInstanceId: string | undefined,
         longRunningTimerIntervalDuration: string | undefined,
         maximumShortTimerDuration: string | undefined,
-        defaultHttpAsyncRequestSleepDurationInMillseconds: number | undefined,
+        defaultHttpAsyncRequestSleepTimeMillseconds: number | undefined,
         schemaVersion: ReplaySchema,
         input: unknown,
         private taskOrchestratorExecutor: TaskOrchestrationExecutor
@@ -64,8 +64,8 @@ export class DurableOrchestrationContext {
         this.maximumShortTimerDuration = maximumShortTimerDuration
             ? moment.duration(maximumShortTimerDuration)
             : undefined;
-        this.defaultHttpAsyncRequestSleepDuration = defaultHttpAsyncRequestSleepDurationInMillseconds
-            ? moment.duration(defaultHttpAsyncRequestSleepDurationInMillseconds, "ms")
+        this.defaultHttpAsyncRequestSleepDuration = defaultHttpAsyncRequestSleepTimeMillseconds
+            ? moment.duration(defaultHttpAsyncRequestSleepTimeMillseconds, "ms")
             : undefined;
         this.schemaVersion = schemaVersion;
         this.input = input;
