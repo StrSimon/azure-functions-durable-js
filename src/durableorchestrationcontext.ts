@@ -310,7 +310,7 @@ export class DurableOrchestrationContext {
         content?: string | object,
         headers?: { [key: string]: string },
         tokenSource?: TokenSource,
-        asynchronousPatternEnabled = true
+        asynchronousPatternEnabled?: boolean
     ): Task {
         if (content && typeof content !== "string") {
             content = JSON.stringify(content);
