@@ -44,8 +44,9 @@ export class DummyOrchestrationContext implements IOrchestrationFunctionContext 
         history: HistoryEvent[] | undefined = undefined,
         input: any = undefined,
         currentUtcDateTime: Date = new Date(),
-        longRunningTimerIntervalDuration: string,
-        maximumShortTimerDuration: string,
+        longRunningTimerIntervalDuration = "3.00:00:00",
+        maximumShortTimerDuration = "6.00:00:00",
+        defaultHttpAsyncRequestSleepDurationInMillseconds = 30000,
         schemaVersion: ReplaySchema,
         isReplaying = false,
         parentInstanceId = ""
@@ -63,6 +64,7 @@ export class DummyOrchestrationContext implements IOrchestrationFunctionContext 
             parentInstanceId,
             longRunningTimerIntervalDuration,
             maximumShortTimerDuration,
+            defaultHttpAsyncRequestSleepDurationInMillseconds,
             schemaVersion,
             input,
             new TaskOrchestrationExecutor()
